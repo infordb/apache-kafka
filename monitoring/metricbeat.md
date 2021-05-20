@@ -13,7 +13,7 @@ The Broker, Producer, Consumer metricsets require Jolokia to fetch JMX metrics
 
 
 
-### broker 설정 예시
+### broker 설정 예시(jolokia)
 kafka-server-start.sh 
 ```
 ## JMX
