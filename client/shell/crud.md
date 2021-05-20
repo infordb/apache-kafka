@@ -82,12 +82,13 @@ kafka-console-consumer.sh \
 
 
 #### consumer  for test
+```
 kafka-console-consumer.sh \
 --bootstrap-server $BK_LIST \
 --consumer.config $JAAS_DIR/client_sasl.properties \
 --topic connect-status \
 --from-beginning
-
+```
 
 
 
