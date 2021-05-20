@@ -12,6 +12,9 @@ The Broker, Producer, Consumer metricsets require Jolokia to fetch JMX metrics
 | producer      | Y            | Y            | kafka-console-producer.sh |
 
 
+**고려사항**  
+SCRAM authentication은 7.13에서 지원 예정임  
+https://github.com/elastic/beats/pull/24810  
 
 ### broker 설정 예시(jolokia)
 kafka-server-start.sh 
@@ -33,7 +36,7 @@ export KAFKA_JMX_OPTS="
 -Djava.net.preferIPv4Stack=true"
 ```
 
-## 동작 확인
+### 동작 확인
 ```
 curl -s 'http://localhost:8778/jolokia/read/kafka.*:*' | python -m json.tool
 curl -s http://localhost:8778/jolokia/version
