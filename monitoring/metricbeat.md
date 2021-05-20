@@ -32,3 +32,9 @@ export KAFKA_JMX_OPTS="
 -Dcom.sun.management.jmxremote.rmi.port=9999 \
 -Djava.net.preferIPv4Stack=true"
 ```
+
+## 동작 확인
+```
+curl -s 'http://localhost:8778/jolokia/read/kafka.*:*' | python -m json.tool
+curl -s http://localhost:8778/jolokia/version
+```
