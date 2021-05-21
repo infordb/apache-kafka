@@ -9,6 +9,9 @@
 
 
 ### zookeeper jaas 설정 임시
+cmak start할때 zookeeper jaas설정 넘기면 kafka 멀티 클러스터 관리를 못함  
+(cluster 마다 zookeeper 설정이 다를 수 있음으로.)
+
 cat /path/users_jaas_zookeeper.conf
 ```
 Client {
