@@ -41,13 +41,14 @@ getAcl /mykafka/config/topics/temp-new
 : cdrwa
 ```
 
-* topic.sh tool로 생성 
-* ```
+* topic.sh tool로 생성 시 zoo node 권한 설정 됨
+```
 getAcl /mykafka/config/topics/GameLog
 'sasl,'kafka
 : cdrwa
 'world,'anyone
 : r
 ```
-
+### kafka jaas 설정 예시
+![image](https://user-images.githubusercontent.com/10610884/119089425-12737b80-ba45-11eb-9182-60de3495400d.png)
 
