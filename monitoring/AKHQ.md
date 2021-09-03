@@ -59,13 +59,13 @@ akhq:
   connections:
     my-cluster-sasl:
       properties:
-        bootstrap.servers: "70.60.31.201:9094, 70.60.31.202:9094, 70.60.31.203:9094"
+        bootstrap.servers: "$broker list"
         security.protocol: SASL_PLAINTEXT
         sasl.mechanism: SCRAM-SHA-256
         sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="client" password="client-secret";
       connect:
         - name: connect-1
-          url: "http://70.60.31.201:8083"
+          url: "http://$connect rest url:8083"
           basic-auth-username: connectadmin
           basic-auth-password: connectadmin
   security:
